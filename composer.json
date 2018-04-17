@@ -9,7 +9,6 @@
     "logging",
     "laravel"
   ],
-  "homepage": "https://github.com/golovchanskiy/laravel-good-log-viewer",
   "type": "laravel-package",
   "license": "MIT",
   "authors": [

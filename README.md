@@ -1,12 +1,6 @@
-# GoodLogViewer [![For Laravel 5][badge_laravel]][link-github-repo]
+# LaravelGoodLogViewer [![For Laravel 5][badge-laravel]][link]
 
 Log Reader|Parser|Viewer for Laravel 5
-
-## Supported localizations
-
-| Local   | Language              |
-|---------|-----------------------|
-| `ru`    | Russian               |
 
 ## Install
 
@@ -21,3 +15,13 @@ Golovchanskiy\LaravelGoodLogViewer\GoodLogViewerServiceProvider::class,
 ```
 
 Go to `http://{YOUR_APPLICATION}/logs` and watch you log files.
+
+#### Supported localizations
+
+| Local   | Language              |
+|---------|-----------------------|
+| `ru`    | Russian               |
+
+[badge-laravel]: https://img.shields.io/badge/Laravel-5.x-orange.svg?style=flat-square
+
+[link]: https://github.com/golovchanskiy/LaravelGoodLogViewer
