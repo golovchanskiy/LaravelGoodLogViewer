@@ -50,7 +50,7 @@ class GoodLogViewerServiceProvider extends ServiceProvider
         ]);
 
         // routes
-        if (config('good-log-viewer.routes.enable') === true) {
+        if (config('good-log-viewer.routes.enabled') === true) {
             include __DIR__ . '/routes/web.php';
         }
 

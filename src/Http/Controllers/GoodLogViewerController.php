@@ -2,9 +2,9 @@
 
 namespace Golovchanskiy\Http\Controllers;
 
-use Illuminate\Routing\Controller\BaseController;
+use Illuminate\Routing\Controller;
 
-class GoodLogViewerController extends BaseController
+class GoodLogViewerController extends Controller
 {
     protected $request;
 

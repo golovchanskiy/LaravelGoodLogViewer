@@ -14,6 +14,12 @@ Add Service Provider to `config/app.php` in `providers` section:
 Golovchanskiy\LaravelGoodLogViewer\GoodLogViewerServiceProvider::class,
 ```
 
+Publish config and translations files:
+
+```bash
+php artisan good-log-viewer:publish
+```
+
 Go to `http://{YOUR_APPLICATION}/logs` and watch you log files.
 
 #### Supported localizations
