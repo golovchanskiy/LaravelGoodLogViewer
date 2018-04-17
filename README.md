@@ -1,4 +1,4 @@
-# GoodLogViewer [![For Laravel 5][badge_laravel]]
+# GoodLogViewer [![For Laravel 5][badge_laravel]][link-github-repo]
 
 Log Reader|Parser|Viewer for Laravel 5
 
