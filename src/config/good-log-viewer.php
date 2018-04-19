@@ -16,7 +16,7 @@ return [
 
     /**
      * Locale
-     *      Supported locales: 'auto', 'ru'
+     *      Supported locales: 'auto', 'ru', 'en'
      */
     'locale' => 'auto',
 
@@ -32,11 +32,7 @@ return [
     'routes' => [
         'enabled' => true,
         'prefix' => 'logs',
+        'middleware' => ['web', 'auth'],
     ],
-
-    /**
-     * Log entries per page
-     */
-    'per-page' => 30,
 
 ];

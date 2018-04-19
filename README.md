@@ -27,6 +27,7 @@ Go to `http://{YOUR_APPLICATION}/logs` and watch you log files.
 | Local   | Language              |
 |---------|-----------------------|
 | `ru`    | Russian               |
+| `en`    | English               |
 
 [badge-laravel]: https://img.shields.io/badge/Laravel-5.x-orange.svg?style=flat-square
 

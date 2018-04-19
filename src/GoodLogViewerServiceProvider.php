@@ -56,6 +56,18 @@ class GoodLogViewerServiceProvider extends ServiceProvider
 
         // commands
         $this->commands($this->commands);
+
+        // set locale
+        $locale = config('good-log-viewer.locale');
+        if ($locale != 'auto') {
+            app()->setLocale($locale);
+        }
+
+        // facade
+        $this->app->bind('GoodLogViewer', function()
+        {
+            return new \App\Util();
+        });
     }
 
 }
