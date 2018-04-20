@@ -72,7 +72,6 @@ class GoodLogViewerController extends Controller
             $data = $this->service->getLog($this->request->get('file'));
             return view("good-log-viewer::{$this->theme}._data", [
                 'data' => $data,
-                'levelList' => $this->service->getLevelClasses(),
             ]);
         } catch (\Exception $e) {
             return view("good-log-viewer::{$this->theme}._error", [

@@ -20,7 +20,7 @@
             <tr data-display="full_text_{{ $key }}">
                 <td class="date">{{ $item['date'] }}</td>
                 <td class="text">
-                    <span class="label label-{{ $levelList[$item['level']] ?? 'default' }}">{{$item['level']}}</span>
+                    <span class="label label-{{ $item['level_class'] }}">{{$item['level']}}</span>
                 </td>
                 <td class="text">{{ $item['context'] }}</td>
                 <td class="text">

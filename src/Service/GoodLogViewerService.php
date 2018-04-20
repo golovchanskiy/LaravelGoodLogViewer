@@ -35,7 +35,7 @@ class GoodLogViewerService
      *
      * @return array
      */
-    public static function getLevels()
+    public function getLevels()
     {
         return array_keys(self::$levels);
     }
@@ -45,7 +45,7 @@ class GoodLogViewerService
      *
      * @return array
      */
-    public static function getLevelClasses()
+    public function getLevelClasses()
     {
         return self::$levels;
     }
@@ -55,7 +55,7 @@ class GoodLogViewerService
      *
      * @return array
      */
-    public static function getPathList()
+    public function getPathList()
     {
         $pathList = [];
 
@@ -73,7 +73,7 @@ class GoodLogViewerService
      * @param null|array|string $paths - log file path list
      * @return array
      */
-    public static function getFileList($path)
+    public function getFileList($path)
     {
         $files = glob($path . '/' . config('good-log-viewer.pattern'));
         $files = array_reverse($files);
@@ -94,7 +94,7 @@ class GoodLogViewerService
      * @return array
      * @throws \Exception
      */
-    public static function getLog($filePath)
+    public function getLog($filePath)
     {
         $pattern = '/\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}([\+-]\d{4})?\].*/';
 
@@ -119,7 +119,7 @@ class GoodLogViewerService
         $data = [];
         foreach ($headings as $h) {
             for ($i = 0, $j = count($h); $i < $j; $i++) {
-                foreach (self::getLevels() as $level) {
+                foreach ($this->getLevels() as $level) {
                     if (strpos(strtolower($h[$i]), '.' . $level) || strpos(strtolower($h[$i]), $level . ':')) {
 
                         preg_match('/^\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}([\+-]\d{4})?)\](?:.*?(\w+)\.|.*?)' . $level . ': (.*?)( in .*?:[0-9]+)?$/i', $h[$i], $current);
@@ -128,7 +128,7 @@ class GoodLogViewerService
                         $data[] = array(
                             'date' => $current[1],
                             'level' => $level,
-                            'level_class' => self::$levels[$level],
+                            'level_class' => self::$levels[$level] ?? 'default',
                             'context' => $current[3],
                             'text' => $current[4],
                             'file' => isset($current[5]) ? $current[5] : null,
