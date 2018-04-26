@@ -71,4 +71,7 @@
             });
         });
     </script>
+
+    @includeIf('good-log-viewer::bootstrap-3.lang.' . app()->getLocale())
+
 @endif
