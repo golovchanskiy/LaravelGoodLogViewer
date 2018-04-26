@@ -36,7 +36,8 @@
                 </td>
                 <td class="text">
                     @if ($item['full_text'])
-                        <button type="button" class="btn btn-sm btn-default" data-display="full_text_{{ $key }}">
+                        <button type="button" class="btn btn-sm btn-default js-log-btn"
+                                data-display="full_text_{{ $key }}">
                             <span class="fa fa-eye"></span>
                         </button>
                     @endif
@@ -48,7 +49,7 @@
 
     <script>
         $(document).ready(function () {
-            $('#log-table tr').on('click', function () {
+            $('#log-table .js-log-btn').on('click', function () {
                 $('#' + $(this).data('display')).toggle();
             });
 
