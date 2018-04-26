@@ -11,7 +11,12 @@ composer require golovchanskiy/laravel-good-log-viewer
 
 Add Service Provider to `config/app.php` in `providers` section:
 ```php
-Golovchanskiy\LaravelGoodLogViewer\GoodLogViewerServiceProvider::class,
+\Golovchanskiy\LaravelGoodLogViewer\GoodLogViewerServiceProvider::class,
+```
+
+Add Alias for Facade to `config/app.php` in `aliases` section:
+```php
+'GoodLogViewer' => \Golovchanskiy\LaravelGoodLogViewer\GoodLogViewer::class,
 ```
 
 Publish config and translations files:

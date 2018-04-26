@@ -3,6 +3,7 @@
 namespace Golovchanskiy\LaravelGoodLogViewer;
 
 use Golovchanskiy\LaravelGoodLogViewer\Console\Commands\PublishCommand;
+use Golovchanskiy\LaravelGoodLogViewer\Service\GoodLogViewerService;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -64,9 +65,8 @@ class GoodLogViewerServiceProvider extends ServiceProvider
         }
 
         // facade
-        $this->app->bind('GoodLogViewer', function()
-        {
-            return new \App\Util();
+        $this->app->bind('GoodLogViewer', function () {
+            return new GoodLogViewerService();
         });
     }
 
